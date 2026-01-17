@@ -14,7 +14,7 @@ data_list = []
 with open(raw_file, "r") as f:
     for line in f:
         clean_path = line.strip()
-        if clean_path and not clean_path.startswith("-"):
+        if clean_path and os.path.exists(clean_path):
             
             raw = subprocess.run(["du", "-sk", clean_path], capture_output=True, text=True)
             result = raw.stdout.strip()
