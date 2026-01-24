@@ -25,4 +25,4 @@ fi
 # done < <(find "$DIR" -type d -mtime +7 \( -name "venv" -o -name "node_modules" -o -name "build" -o -name ".terraform*" \))
 
 # Faster Method
-find "$DIR" -type d -mtime +7 \( -name "venv" -o -name ".venv" -o -name "node_modules" -o -name "build" -o -name ".terraform*" \) > "$OUTPUT_FILE"
+find "$DIR" -type d \( -name "venv" -o -name ".venv" -o -name "node_modules" -o -name "build" -o -name ".terraform*" \) > "$OUTPUT_FILE"
