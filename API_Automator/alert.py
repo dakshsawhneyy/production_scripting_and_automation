@@ -32,3 +32,4 @@ for line in sys.stdin:
         if status_code >= 400 and status_code < 600:
             severity = "High"
             send_alert(severity, status_code)
+            
