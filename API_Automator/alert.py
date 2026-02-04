@@ -9,12 +9,10 @@ load_dotenv()
 WEBHOOK_URL = os.getenv('WEBHOOK_URL')
 
 def send_alert(severity, error_code):
-    
     payload = {
         "text": f"Server Error {error_code}",
         "severity": severity
     }
-    
     try:
         requests.post(WEBHOOK_URL, json=payload)
     except Exception as e:
