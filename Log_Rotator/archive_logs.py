@@ -17,6 +17,7 @@ REGION = "ap-south-1"
 # Setup Logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
+
 def get_stale_files():
     # Find files > 3 days old
     cmd = ["find", LOG_DIR, "-type", "f", "-name", "*.log", "-mtime", "+3"]
